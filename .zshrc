@@ -12,13 +12,13 @@ function get_battery {
 	if [ "$CAPACITY" -ge 85 ]; then
 		echo "$BAT_LABEL: %B%F{green}$CAPACITY%%%f%b"
 	elif [ "$CAPACITY" -ge 65 ]; then
-		echo "$BAT_LABEL: %%F{green}$CAPACITY%%%f"
+		echo "$BAT_LABEL: %F{green}$CAPACITY%%%f"
 	elif [ "$CAPACITY" -ge 45 ]; then
-		echo "$BAT_LABEL: %%F{yellow}$CAPACITY%%%f"
+		echo "$BAT_LABEL: %F{yellow}$CAPACITY%%%f"
 	elif [ "$CAPACITY" -ge 25 ]; then
-		echo "$BAT_LABEL: %%F{red}$CAPACITY%%%f"
+		echo "$BAT_LABEL: %F{red}$CAPACITY%%%f"
 	else
-		echo "$BAT_LABEL: %%B%F{red}$CAPACITY%%%f%b"
+		echo "$BAT_LABEL: %B%F{red}$CAPACITY%%%f%b"
 	fi
 }
 
